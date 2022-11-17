@@ -134,6 +134,11 @@
         "description": "Size of the virtual machine."
       }
     },
+    "vnetip": {
+      "type": "string",
+      "metadata": {
+        "description": "custom vnetip."
+      }
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
@@ -152,7 +157,7 @@
   "variables": {
     "storageAccountName": "[format('bootdiags{0}', uniqueString(resourceGroup().id))]",
     "nicName": "myVMNic",
-    "addressPrefix": "10.0.0.0/16",
+    "addressPrefix": "[parameters('vnetip')]",
     "subnetName": "Subnet",
     "subnetPrefix": "10.0.0.0/24",
     "virtualNetworkName": "MyVNET",
