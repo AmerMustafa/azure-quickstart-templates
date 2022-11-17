@@ -139,6 +139,7 @@
       "metadata": {
         "description": "custom vnetip."
       }
+    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
