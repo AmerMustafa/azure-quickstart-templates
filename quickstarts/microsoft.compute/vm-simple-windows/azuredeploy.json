@@ -140,6 +140,12 @@
         "description": "custom vnetip."
       }
     },
+    "subnetip": {
+      "type": "string",
+      "metadata": {
+        "description": "custom vnetip."
+      }
+    },
     "location": {
       "type": "string",
       "defaultValue": "[resourceGroup().location]",
@@ -160,7 +166,7 @@
     "nicName": "myVMNic",
     "addressPrefix": "[parameters('vnetip')]",
     "subnetName": "Subnet",
-    "subnetPrefix": "10.0.0.0/24",
+    "subnetPrefix": "[parameters('subnetip')]",
     "virtualNetworkName": "MyVNET",
     "networkSecurityGroupName": "default-NSG"
   },
